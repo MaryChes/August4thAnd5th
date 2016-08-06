@@ -23,7 +23,11 @@ public class PigLatinLegendary
 			{
 				StringBuilder modifiedWordsInTheSentence = new StringBuilder(wordsInUserSentence[j]);
 				char firstLetter = modifiedWordsInTheSentence.charAt(0);
-				char secondLetter = modifiedWordsInTheSentence.charAt(1);
+				char secondLetter = ' ';
+				if (modifiedWordsInTheSentence.length() > 1)
+				{
+					secondLetter = modifiedWordsInTheSentence.charAt(1);
+				}
 				if (theFirstLetterIsAVowel(firstLetter))
 				{
 					modifiedWordsInTheSentence.append("ay ");

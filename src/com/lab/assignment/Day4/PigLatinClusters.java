@@ -18,8 +18,14 @@ public class PigLatinClusters
 			userInput = userInput.toLowerCase();
 			StringBuilder modifiedUserInput = new StringBuilder(userInput);
 			char firstLetter = modifiedUserInput.charAt(0);
-			char secondLetter = modifiedUserInput.charAt(1);
-			char thirdLetter = modifiedUserInput.charAt(2);
+			char secondLetter = ' ';
+			if (modifiedUserInput.length() > 1)
+			{
+				secondLetter = modifiedUserInput.charAt(1);
+			}
+			
+				//			String singleLetter = modifiedUserInput.length();
+			
 			
 			if (theFirstLetterIsAVowel(firstLetter)) 
 			{
@@ -27,6 +33,11 @@ public class PigLatinClusters
 				System.out.println(modifiedUserInput + "\n");
 				
 			} 
+//			else if (theFirstLetterIsAVowel(firstLetter.length() > 1)
+//					{
+//						modifiedUserInput.append("ay");
+//						System.out.println(modifiedUserInput + "\n");
+//					}
 			else if (isConsonant(secondLetter))
 			{
 				modifiedUserInput.append(firstLetter);
@@ -36,18 +47,7 @@ public class PigLatinClusters
 				modifiedUserInput.append("ay");
 				System.out.println(modifiedUserInput);	
 			}
-			else if (isConsonantTriple(thirdLetter))
-			{
-				modifiedUserInput.append(firstLetter);
-				modifiedUserInput.append(secondLetter);
-				modifiedUserInput.append(thirdLetter);
-				modifiedUserInput.deleteCharAt(0);
-				modifiedUserInput.deleteCharAt(0);
-				modifiedUserInput.deleteCharAt(0);
-				modifiedUserInput.append("ay");
-				System.out.println(modifiedUserInput);
-			}
-			else
+			else 
 			{
 				modifiedUserInput.append(firstLetter + "ay");  
 				modifiedUserInput.deleteCharAt(0);
@@ -83,20 +83,6 @@ public class PigLatinClusters
 			}
 		}
 		return isACluster;
-	}
-	public static boolean isConsonantTriple(char thirdLetter)
-	{ 
-		char[] vowel = {'a', 'e','i','o','u'};
-		boolean isATripleCluster = true;
-		for (int i = 0; i < vowel.length; i++) 
-		
-		{
-			if (thirdLetter == vowel[i])
-			{
-				isATripleCluster = false;
-			}
-		}
-		return isATripleCluster;
 	}
 	     
 }

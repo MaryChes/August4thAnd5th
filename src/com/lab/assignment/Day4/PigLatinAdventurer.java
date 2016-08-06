@@ -1,7 +1,6 @@
 package com.lab.assignment.Day4;  
 //http://stackoverflow.com/questions/37502100/pig-latin-translator-finding-consonant-clusters FIGURE OUT LATER
 import java.util.Scanner;
-
 public class PigLatinAdventurer 
 {
 	private static boolean pigLatin = true;
@@ -31,7 +30,11 @@ public class PigLatinAdventurer
 			{
 				StringBuilder modifiedWordsInTheSentence = new StringBuilder(wordsInTheSentence[i]);
 				char firstLetter = modifiedWordsInTheSentence.charAt(0);
-				char secondLetter = modifiedWordsInTheSentence.charAt(1);
+				char secondLetter = ' ';
+				if (modifiedWordsInTheSentence.length() > 1)
+				{
+					secondLetter = modifiedWordsInTheSentence.charAt(1);
+				}
 				if (theFirstLetterIsAVowel(firstLetter))
 				{
 					modifiedWordsInTheSentence.append("ay ");

@@ -18,7 +18,11 @@ public class PigLatinExplorer
 			userInput = userInput.toLowerCase();
 			StringBuilder modifiedUserInput = new StringBuilder(userInput);
 			char firstLetter = modifiedUserInput.charAt(0);
-			char secondLetter = modifiedUserInput.charAt(1);
+			char secondLetter = ' ';
+			if (modifiedUserInput.length() > 1)
+			{
+				secondLetter = modifiedUserInput.charAt(1);
+			}
 			
 			if (theFirstLetterIsAVowel(firstLetter)) 
 			{
@@ -26,6 +30,7 @@ public class PigLatinExplorer
 				System.out.println(modifiedUserInput + "\n");
 				
 			} 
+
 			else if (isConsonant(secondLetter))
 			{
 				modifiedUserInput.append(firstLetter);

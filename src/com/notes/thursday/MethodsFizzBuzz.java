@@ -22,15 +22,15 @@ public class MethodsFizzBuzz
 			{
 				System.out.println("Buzz Bang");
 			}
-			else if(divisibleByOnlySeven(i));
+			else if(divisibleByOnlySeven(i))
 			{
 				System.out.println("Bang");
 			}
-			else if(divisiblebyOnlyFive(i));
+			else if(divisiblebyOnlyFive(i))
 			{
 				System.out.println("Buzz");
 			}
-			else if (divisibleByOnlyThree(i));
+			else if (divisibleByOnlyThree(i))
 			{
 				System.out.println("Fizz");
 			}
